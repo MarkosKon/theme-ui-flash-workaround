@@ -5,6 +5,7 @@ export { wrapRootElement } from "./src/rootElement"
 const noflash = `
 (function() {
   try {
+    // Ignores prefers-color-scheme at the moment.
     var mode = localStorage.getItem('theme-ui-color-mode') || "light";
     document.body.classList.add(mode);
   } catch (e) {
